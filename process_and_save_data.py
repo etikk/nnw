@@ -10,19 +10,17 @@ import numpy as np
 from scipy.stats import entropy
 from sklearn.metrics.pairwise import cosine_similarity
 from PIL import Image, ImageDraw
-from multiprocessing import Pool
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 import traceback
+import os
 
-# BLOCK 5
 # Initialize the tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 print("Tokenizer initialized")
 
 def preprocess_and_split_data(dataset, min_tokens=256, max_length=256):
     #print("Called preprocess_and_split_data")
-
     """
     Tokenize, filter, and split the dataset.
     - Tokenize texts
@@ -44,7 +42,6 @@ def preprocess_and_split_data(dataset, min_tokens=256, max_length=256):
 
 def verify_token_lengths_and_labels(data, label='Train'):
     #print("Called verify_token_lengths_and_labels")
-
     print(f"--- {label} Data Verification ---")
     print(f"{label} set size: {len(data)}")
     all_256_tokens = all(len(tokens) == 256 for tokens in data['tokens'])
@@ -53,7 +50,6 @@ def verify_token_lengths_and_labels(data, label='Train'):
         print(f"Sample labels from {label} data:")
         print(data['label'].sample(5).to_list())
 
-# BLOCK 11
 # Initialize the model
 model = BertForMaskedLM.from_pretrained('bert-base-uncased')
 model.eval()
@@ -61,7 +57,6 @@ print("BERT model initialized")
 
 def calculate_metrics(token_ids):
     #print("Called calculate_metrics")
-
     """Calculate metrics for a single text represented by token IDs."""
     # Convert token IDs to tensor
     input_ids = torch.tensor([token_ids])
@@ -107,7 +102,6 @@ def calculate_metrics(token_ids):
 
 def pad_or_truncate_metrics(metrics, target_length=256):
     #print("Called pad_or_truncate_metrics")
-
     """Pad or truncate the metrics to ensure the token array has the target length."""
     current_length = len(metrics['tokens'])
     if current_length < target_length:
@@ -121,7 +115,6 @@ def pad_or_truncate_metrics(metrics, target_length=256):
 
 def spread_normalization(data, scale=255):
     #print("Called spread_normalization")
-
     """Normalize data using a square root transformation to reduce high-end compression."""
     sqrt_data = np.sqrt(data)
     normalized_data = (sqrt_data - np.min(sqrt_data)) / (np.max(sqrt_data) - np.min(sqrt_data))
@@ -129,7 +122,6 @@ def spread_normalization(data, scale=255):
 
 def clip_and_normalize_metrics(metrics):
     #print("Called clip_and_normalize_metrics")
-
     """Adjusts the metrics by clipping to a range between the lowest non-zero and highest non-255 values for 'probabilities' and 'similarity'."""
     keys_to_normalize = ['probabilities', 'similarity']
     for key in keys_to_normalize:
@@ -148,7 +140,6 @@ def clip_and_normalize_metrics(metrics):
 
 def generate_circle_image(metrics, img_width=256, img_height=256):
     #print("Called generate_circle_image")
-
     """Generate a 256x256 pixel grayscale image with circles based on metrics."""
     img = Image.new('L', (img_width, img_height), color='white')  # 'L' mode for grayscale
     draw = ImageDraw.Draw(img)
@@ -179,7 +170,6 @@ def generate_circle_image(metrics, img_width=256, img_height=256):
 
 def process_single_entry(entry):
     #print("Called process_single_entry")
-
     token_ids, label = entry
     try:
         metrics = calculate_metrics(token_ids)
@@ -195,46 +185,47 @@ def process_single_entry(entry):
         print(traceback.format_exc())
         return None, None, None
 
-#def process_images_and_metrics(tokens, labels):
+def process_images_and_metrics(tokens, labels, set_name, batch_size=10, start_index=0, output_dir='npz_results'):
     print("Called process_images_and_metrics")
+    num_batches = (len(tokens) - start_index + batch_size - 1) // batch_size  # Calculate total number of batches
 
-    images = []
-    all_metrics = []
-    all_labels = []
-    with Pool(processes=2) as pool:  # Adjust number of processes based on available CPU cores
-        results = list(tqdm(pool.imap(process_single_entry, zip(tokens, labels)), total=len(tokens)))
-    for result in results:
-        img, metrics, label = result
-        if img is not None:
-            images.append(img)
-            all_metrics.append(metrics)
-            all_labels.append(label)
-    return images, all_metrics, all_labels
+    os.makedirs(output_dir, exist_ok=True)
 
-def process_images_and_metrics(tokens, labels):
-    print("Called process_images_and_metrics")
+    for batch_idx in range(num_batches):
+        batch_start = start_index + batch_idx * batch_size
+        batch_end = min(batch_start + batch_size, len(tokens))
+        batch_tokens = tokens[batch_start:batch_end]
+        batch_labels = labels[batch_start:batch_end]
 
-    images = []
-    all_metrics = []
-    all_labels = []
-    for entry in tqdm(zip(tokens, labels), total=len(tokens)):
-        img, metrics, label = process_single_entry(entry)
-        if img is not None:
-            images.append(img)
-            all_metrics.append(metrics)
-            all_labels.append(label)
-    return images, all_metrics, all_labels
+        images = []
+        all_metrics = []
+        all_labels = []
 
-# Sanity check for image and mterics generation
-import matplotlib.pyplot as plt
+        for entry in tqdm(zip(batch_tokens, batch_labels), total=len(batch_tokens)):
+            img, metrics, label = process_single_entry(entry)
+            if img is not None:
+                images.append(img)
+                all_metrics.append(metrics)
+                all_labels.append(label)
 
-def plot_image(image, title):
-    """Helper function to plot an image with a title."""
-    plt.figure(figsize=(2, 2))
-    plt.imshow(image, cmap='gray')
-    plt.title(title)
+        # Save batch results to .npz file
+        np.savez_compressed(f'{output_dir}/data_batch_{set_name}_{batch_start}_{batch_end}.npz', images=images, metrics=all_metrics, labels=all_labels)
+
+        # Perform sanity check on the first entry of the batch
+        if len(images) > 0:
+            sanity_check_images_and_metrics(images[:1], all_metrics[:1], batch_start, set_name)
+
+def sanity_check_images_and_metrics(images, metrics, index, set_name):
+    """Performs a sanity check by displaying images and printing metrics."""
+    os.makedirs('npz_results/sanity_images', exist_ok=True)
+    img_path = f'npz_results/sanity_images/sanity_image_{set_name}_{index}.png'
+    plt.figure(figsize=(2.56, 2.56))  # 256x256 pixels
+    plt.imshow(images[0], cmap='gray')
+    plt.title(f"Sample Image at Index {index}")
     plt.axis('off')
-    plt.show()
+    plt.savefig(img_path)
+    plt.close()
+    print_metrics(metrics[0], index)
 
 def print_metrics(metrics, idx):
     """Helper function to print selected metrics."""
@@ -243,18 +234,6 @@ def print_metrics(metrics, idx):
     for key in keys_to_display:
         if key in metrics:
             print(f"{key}: {metrics[key][:5]}")  # Print first 5 values as an example
-
-def sanity_check_images_and_metrics(images, metrics, step=400):
-    """Performs a sanity check by displaying images and printing metrics at specified intervals."""
-    for idx in range(0, len(images), step):
-        import matplotlib.pyplot as plt
-        plt.figure(figsize=(2.56, 2.56))  # 256x256 pixels
-        plt.imshow(images[idx])
-        plt.title(f"Sample Image at Index {idx}")
-        plt.axis('off')
-        plt.show()
-        plot_image(images[idx], f"Sample Image at Index {idx}")
-        print_metrics(metrics[idx], idx)
 
 def main():
     print("Main function started")
@@ -282,24 +261,14 @@ def main():
     print(f"Validation set size: {len(val_data)}")
     print(f"Test set size: {len(test_data)}")
 
-    # Process and save data with labels
-    print("Processing and saving data")
-    train_images, train_metrics, train_labels = process_images_and_metrics(train_data['tokens'], train_data['label'])
-    val_images, val_metrics, val_labels = process_images_and_metrics(val_data['tokens'], val_data['label'])
-    test_images, test_metrics, test_labels = process_images_and_metrics(test_data['tokens'], test_data['label'])
+    # Set the starting index for batch processing
+    start_index = 0  # Manually set this to resume from a specific index
 
-    # Save to .npz files
-    print("Saving data to .npz files")
-    np.savez_compressed('npz_results/train_data.npz', images=train_images, metrics=train_metrics, labels=train_labels)
-    np.savez_compressed('npz_results/val_data.npz', images=val_images, metrics=val_metrics, labels=val_labels)
-    np.savez_compressed('npz_results/test_data.npz', images=test_images, metrics=test_metrics, labels=test_labels)
-
-
-    # Sanity check for training data
-    sanity_check_images_and_metrics(train_images, train_metrics)
-    sanity_check_images_and_metrics(val_images, val_metrics)
-    sanity_check_images_and_metrics(test_images, test_metrics)
-
+    # Process and save data with labels in batches
+    print("Processing and saving data in batches")
+    process_images_and_metrics(train_data['tokens'], train_data['label'], 'train', batch_size=10, start_index=start_index, output_dir='npz_results/train')
+    process_images_and_metrics(val_data['tokens'], val_data['label'], 'val', batch_size=10, start_index=start_index, output_dir='npz_results/val')
+    process_images_and_metrics(test_data['tokens'], test_data['label'], 'test', batch_size=10, start_index=start_index, output_dir='npz_results/test')
 
 if __name__ == "__main__":
     main()
