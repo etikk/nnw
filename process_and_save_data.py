@@ -245,9 +245,9 @@ def main():
 
     # Limit dataset size for pipeline testing
     # Comment this out in real pipeline
-    dataset_train = dataset_train[:100]
-    dataset_test = dataset_test[:100]
-    print("Datasets limited to 100 entries each")
+    # dataset_train = dataset_train[:100]
+    # dataset_test = dataset_test[:100]
+    # print("Datasets limited to 100 entries each")
 
     # Combine train and test datasets for preprocessing
     combined_dataset = pd.concat([dataset_train, dataset_test])
@@ -266,9 +266,9 @@ def main():
 
     # Process and save data with labels in batches
     print("Processing and saving data in batches")
-    process_images_and_metrics(train_data['tokens'], train_data['label'], 'train', batch_size=10, start_index=start_index, output_dir='npz_results/train')
-    process_images_and_metrics(val_data['tokens'], val_data['label'], 'val', batch_size=10, start_index=start_index, output_dir='npz_results/val')
-    process_images_and_metrics(test_data['tokens'], test_data['label'], 'test', batch_size=10, start_index=start_index, output_dir='npz_results/test')
+    process_images_and_metrics(train_data['tokens'], train_data['label'], 'train', batch_size=10000, start_index=240000, output_dir='npz_results/train')
+    process_images_and_metrics(val_data['tokens'], val_data['label'], 'val', batch_size=10000, start_index=start_index, output_dir='npz_results/val')
+    process_images_and_metrics(test_data['tokens'], test_data['label'], 'test', batch_size=10000, start_index=start_index, output_dir='npz_results/test')
 
 if __name__ == "__main__":
     main()
