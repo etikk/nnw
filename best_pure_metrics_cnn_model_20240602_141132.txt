@@ -1,0 +1,507 @@
+[I 2024-06-01 21:59:57,302] A new study created in memory with name: no-name-1b2fb5af-6825-484b-8f47-740e778f4494
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [04:23<00:00, 13.17s/it]
+/home/erkkit/nnw/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Results for fold 1:
+    Accuracy: 0.6499775985663082
+    Precision: 0.3249887992831541
+    Recall: 0.5
+    F1 Score: 0.3939311655692078
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [04:13<00:00, 12.70s/it]
+  Results for fold 2:
+    Accuracy: 0.8043234767025089
+    Precision: 0.8052460310906501
+    Recall: 0.7582391765268947
+    F1 Score: 0.7717888348622821
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [04:09<00:00, 12.50s/it]
+[I 2024-06-01 22:12:50,541] Trial 0 finished with value: 0.6387370882966455 and parameters: {'conv1_filters': 16, 'conv2_filters': 96, 'conv3_filters': 192, 'fc1_units': 128, 'dropout_rate': 0.6000000000000001}. Best is trial 0 with value: 0.6387370882966455.
+  Results for fold 3:
+    Accuracy: 0.7958109318996416
+    Precision: 0.8147559607670041
+    Recall: 0.7339450570498263
+    F1 Score: 0.7504912644584469
+Average across folds:
+  Accuracy: 0.7500373357228195
+  Precision: 0.6483302637136027
+  Recall: 0.6640614111922403
+  F1 Score: 0.6387370882966455
+Training and cross-validation completed.
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [06:43<00:00, 20.19s/it]
+  Results for fold 1:
+    Accuracy: 0.8267249103942652
+    Precision: 0.8182323359835534
+    Recall: 0.7922046665517836
+    F1 Score: 0.802105950966446
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [06:41<00:00, 20.07s/it]
+  Results for fold 2:
+    Accuracy: 0.8309811827956989
+    Precision: 0.8183273648212672
+    Recall: 0.8101909086706495
+    F1 Score: 0.8138698049711297
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [06:42<00:00, 20.14s/it]
+[I 2024-06-01 22:33:05,976] Trial 1 finished with value: 0.802904339479538 and parameters: {'conv1_filters': 48, 'conv2_filters': 128, 'conv3_filters': 192, 'fc1_units': 256, 'dropout_rate': 0.5}. Best is trial 1 with value: 0.802904339479538.
+  Results for fold 3:
+    Accuracy: 0.8070116487455197
+    Precision: 0.7891146949287261
+    Recall: 0.7976036884012367
+    F1 Score: 0.7927372625010383
+Average across folds:
+  Accuracy: 0.8215725806451614
+  Precision: 0.8085581319111822
+  Recall: 0.7999997545412233
+  F1 Score: 0.802904339479538
+Training and cross-validation completed.
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [04:47<00:00, 14.38s/it]
+  Results for fold 1:
+    Accuracy: 0.8142921146953405
+    Precision: 0.8096219954649813
+    Recall: 0.7710481337239359
+    F1 Score: 0.783818972889863
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [04:43<00:00, 14.16s/it]
+  Results for fold 2:
+    Accuracy: 0.8213485663082437
+    Precision: 0.8208254719970731
+    Recall: 0.7818040076068086
+    F1 Score: 0.7945396614002609
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [04:41<00:00, 14.09s/it]
+[I 2024-06-01 22:47:25,725] Trial 2 finished with value: 0.7881705799102211 and parameters: {'conv1_filters': 16, 'conv2_filters': 128, 'conv3_filters': 256, 'fc1_units': 64, 'dropout_rate': 0.6000000000000001}. Best is trial 1 with value: 0.802904339479538.
+  Results for fold 3:
+    Accuracy: 0.8056675627240143
+    Precision: 0.7890135269807863
+    Recall: 0.7836815607300189
+    F1 Score: 0.7861531054405393
+Average across folds:
+  Accuracy: 0.8137694145758662
+  Precision: 0.8064869981476136
+  Recall: 0.7788445673535879
+  F1 Score: 0.7881705799102211
+Training and cross-validation completed.
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [02:58<00:00,  8.92s/it]
+  Results for fold 1:
+    Accuracy: 0.798163082437276
+    Precision: 0.7972587499585189
+    Recall: 0.7454976529381354
+    F1 Score: 0.7599021763190187
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [02:55<00:00,  8.79s/it]
+  Results for fold 2:
+    Accuracy: 0.7892025089605734
+    Precision: 0.7913980442415625
+    Recall: 0.7370564807665448
+    F1 Score: 0.7507163466616975
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [02:57<00:00,  8.88s/it]
+[I 2024-06-01 22:56:20,735] Trial 3 finished with value: 0.7633039028618388 and parameters: {'conv1_filters': 16, 'conv2_filters': 32, 'conv3_filters': 256, 'fc1_units': 128, 'dropout_rate': 0.3}. Best is trial 1 with value: 0.802904339479538.
+  Results for fold 3:
+    Accuracy: 0.7987231182795699
+    Precision: 0.7809334743515977
+    Recall: 0.7777976304484636
+    F1 Score: 0.7792931856048004
+Average across folds:
+  Accuracy: 0.7953629032258065
+  Precision: 0.7898634228505598
+  Recall: 0.7534505880510479
+  F1 Score: 0.7633039028618388
+Training and cross-validation completed.
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [02:55<00:00,  8.76s/it]
+  Results for fold 1:
+    Accuracy: 0.8378136200716846
+    Precision: 0.8267564387636558
+    Recall: 0.8107766603480958
+    F1 Score: 0.8175403225806452
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [02:51<00:00,  8.56s/it]
+  Results for fold 2:
+    Accuracy: 0.8066756272401434
+    Precision: 0.7918326229092902
+    Recall: 0.7819924422035206
+    F1 Score: 0.7862806094979627
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [02:55<00:00,  8.78s/it]
+[I 2024-06-01 23:05:06,111] Trial 4 finished with value: 0.7969053147945943 and parameters: {'conv1_filters': 32, 'conv2_filters': 64, 'conv3_filters': 128, 'fc1_units': 192, 'dropout_rate': 0.3}. Best is trial 1 with value: 0.802904339479538.
+  Results for fold 3:
+    Accuracy: 0.8202284946236559
+    Precision: 0.831676168184216
+    Recall: 0.7702138616028675
+    F1 Score: 0.7868950123051748
+Average across folds:
+  Accuracy: 0.8215725806451614
+  Precision: 0.8167550766190539
+  Recall: 0.7876609880514946
+  F1 Score: 0.7969053147945943
+Training and cross-validation completed.
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [03:29<00:00, 10.46s/it]
+  Results for fold 1:
+    Accuracy: 0.8125
+    Precision: 0.828273119411197
+    Recall: 0.7535729243494744
+    F1 Score: 0.7717593446668662
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [03:32<00:00, 10.63s/it]
+  Results for fold 2:
+    Accuracy: 0.8228046594982079
+    Precision: 0.819925112087275
+    Recall: 0.7859117180776102
+    F1 Score: 0.7975738841701675
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [03:30<00:00, 10.55s/it]
+[I 2024-06-01 23:15:44,252] Trial 5 finished with value: 0.789332976195019 and parameters: {'conv1_filters': 16, 'conv2_filters': 128, 'conv3_filters': 192, 'fc1_units': 64, 'dropout_rate': 0.7}. Best is trial 1 with value: 0.802904339479538.
+  Results for fold 3:
+    Accuracy: 0.8297491039426523
+    Precision: 0.8430458894896149
+    Recall: 0.7814054231537473
+    F1 Score: 0.7986656997480235
+Average across folds:
+  Accuracy: 0.82168458781362
+  Precision: 0.830414706996029
+  Recall: 0.7736300218602773
+  F1 Score: 0.789332976195019
+Training and cross-validation completed.
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [03:40<00:00, 11.01s/it]
+  Results for fold 1:
+    Accuracy: 0.7764336917562724
+    Precision: 0.828673835125448
+    Recall: 0.69046041013269
+    F1 Score: 0.7043685068296075
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [03:38<00:00, 10.94s/it]
+  Results for fold 2:
+    Accuracy: 0.8121639784946236
+    Precision: 0.8228090535456173
+    Recall: 0.7615802406363015
+    F1 Score: 0.7775684400268762
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [03:33<00:00, 10.65s/it]
+[I 2024-06-01 23:26:40,195] Trial 6 finished with value: 0.7635130273554208 and parameters: {'conv1_filters': 16, 'conv2_filters': 64, 'conv3_filters': 192, 'fc1_units': 192, 'dropout_rate': 0.6000000000000001}. Best is trial 1 with value: 0.802904339479538.
+  Results for fold 3:
+    Accuracy: 0.8271729390681004
+    Precision: 0.81417035156199
+    Recall: 0.8041774701069855
+    F1 Score: 0.8086021352097791
+Average across folds:
+  Accuracy: 0.8052568697729988
+  Precision: 0.8218844134110185
+  Recall: 0.7520727069586589
+  F1 Score: 0.7635130273554208
+Training and cross-validation completed.
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [01:41<00:00,  5.08s/it]
+  Results for fold 1:
+    Accuracy: 0.7809139784946236
+    Precision: 0.8185909393519377
+    Recall: 0.7012168326727555
+    F1 Score: 0.7167216974720003
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [01:40<00:00,  5.03s/it]
+  Results for fold 2:
+    Accuracy: 0.7905465949820788
+    Precision: 0.7733291088046892
+    Recall: 0.7656949918204922
+    F1 Score: 0.7690818382874665
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [01:41<00:00,  5.09s/it]
+[I 2024-06-01 23:31:46,202] Trial 7 finished with value: 0.7587314793867966 and parameters: {'conv1_filters': 16, 'conv2_filters': 32, 'conv3_filters': 64, 'fc1_units': 256, 'dropout_rate': 0.3}. Best is trial 1 with value: 0.802904339479538.
+  Results for fold 3:
+    Accuracy: 0.8101478494623656
+    Precision: 0.7944841771357662
+    Recall: 0.7870190713328044
+    F1 Score: 0.7903909024009232
+Average across folds:
+  Accuracy: 0.7938694743130227
+  Precision: 0.7954680750974644
+  Recall: 0.751310298608684
+  F1 Score: 0.7587314793867966
+Training and cross-validation completed.
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [07:31<00:00, 22.58s/it]
+  Results for fold 1:
+    Accuracy: 0.8169802867383512
+    Precision: 0.8090584380728224
+    Recall: 0.7782846665517835
+    F1 Score: 0.789299808219501
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [07:35<00:00, 22.76s/it]
+  Results for fold 2:
+    Accuracy: 0.802755376344086
+    Precision: 0.7986128733771145
+    Recall: 0.7607519470983719
+    F1 Score: 0.7726466473712426
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [07:45<00:00, 23.28s/it]
+[I 2024-06-01 23:54:47,713] Trial 8 finished with value: 0.7879995670634045 and parameters: {'conv1_filters': 64, 'conv2_filters': 128, 'conv3_filters': 256, 'fc1_units': 256, 'dropout_rate': 0.4}. Best is trial 1 with value: 0.802904339479538.
+  Results for fold 3:
+    Accuracy: 0.8158602150537635
+    Precision: 0.7984828293707056
+    Recall: 0.8067252578871043
+    F1 Score: 0.8020522455994699
+Average across folds:
+  Accuracy: 0.811865292712067
+  Precision: 0.8020513802735474
+  Recall: 0.7819206238457532
+  F1 Score: 0.7879995670634045
+Training and cross-validation completed.
+Fold 1:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 1: 100%|██████████| 20/20 [02:44<00:00,  8.21s/it]
+  Results for fold 1:
+    Accuracy: 0.8220206093189965
+    Precision: 0.813752741930285
+    Recall: 0.7855585042219542
+    F1 Score: 0.7959922123643663
+Fold 2:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 2: 100%|██████████| 20/20 [02:45<00:00,  8.29s/it]
+  Results for fold 2:
+    Accuracy: 0.8123879928315412
+    Precision: 0.7988556040703281
+    Recall: 0.7868568383365425
+    F1 Score: 0.7919705478015704
+Fold 3:
+  X_train shape: (17856, 256, 4)
+  y_train shape: (17856,)
+  X_val shape: (8928, 256, 4)
+  y_val shape: (8928,)
+Training fold 3: 100%|██████████| 20/20 [02:45<00:00,  8.29s/it]
+[I 2024-06-02 00:03:07,169] Trial 9 finished with value: 0.786890810482558 and parameters: {'conv1_filters': 16, 'conv2_filters': 96, 'conv3_filters': 128, 'fc1_units': 128, 'dropout_rate': 0.4}. Best is trial 1 with value: 0.802904339479538.
+  Results for fold 3:
+    Accuracy: 0.7850582437275986
+    Precision: 0.7679026897315928
+    Recall: 0.7828825895422333
+    F1 Score: 0.7727096712817373
+Average across folds:
+  Accuracy: 0.8064889486260455
+  Precision: 0.793503678577402
+  Recall: 0.7850993107002434
+  F1 Score: 0.786890810482558
+Training and cross-validation completed.
+Best trial: [0.802904339479538]
+Best hyperparameters: {'conv1_filters': 48, 'conv2_filters': 128, 'conv3_filters': 192, 'fc1_units': 256, 'dropout_rate': 0.5}
+Fold 1:
+  X_train shape: (229578, 256, 4)
+  y_train shape: (229578,)
+  X_val shape: (38263, 256, 4)
+  y_val shape: (38263,)
+Training fold 1: 100%|██████████| 20/20 [1:50:51<00:00, 332.57s/it]
+  Results for fold 1:
+    Accuracy: 0.8700311005409926
+    Precision: 0.9009225514896506
+    Recall: 0.8234140864905442
+    F1 Score: 0.8454257451540994
+Fold 2:
+  X_train shape: (229578, 256, 4)
+  y_train shape: (229578,)
+  X_val shape: (38263, 256, 4)
+  y_val shape: (38263,)
+Training fold 2: 100%|██████████| 20/20 [1:50:32<00:00, 331.60s/it]
+  Results for fold 2:
+    Accuracy: 0.8910174319839009
+    Precision: 0.9141971093448813
+    Recall: 0.8513143383137842
+    F1 Score: 0.8718772618473756
+Fold 3:
+  X_train shape: (229578, 256, 4)
+  y_train shape: (229578,)
+  X_val shape: (38263, 256, 4)
+  y_val shape: (38263,)
+Training fold 3: 100%|██████████| 20/20 [1:50:13<00:00, 330.67s/it]
+  Results for fold 3:
+    Accuracy: 0.8855552361288974
+    Precision: 0.8865494109664817
+    Recall: 0.8615496383568673
+    F1 Score: 0.8716356083662049
+Fold 4:
+  X_train shape: (229578, 256, 4)
+  y_train shape: (229578,)
+  X_val shape: (38263, 256, 4)
+  y_val shape: (38263,)
+Training fold 4: 100%|██████████| 20/20 [1:50:50<00:00, 332.54s/it]
+  Results for fold 4:
+    Accuracy: 0.9140161513733894
+    Precision: 0.9249399375388296
+    Recall: 0.8884626267594669
+    F1 Score: 0.9025062360714367
+Fold 5:
+  X_train shape: (229578, 256, 4)
+  y_train shape: (229578,)
+  X_val shape: (38263, 256, 4)
+  y_val shape: (38263,)
+Training fold 5: 100%|██████████| 20/20 [2:05:31<00:00, 376.60s/it]
+  Results for fold 5:
+    Accuracy: 0.8876198938922719
+    Precision: 0.9173462416274357
+    Recall: 0.8450765701365981
+    F1 Score: 0.8671967461025473
+Fold 6:
+  X_train shape: (229578, 256, 4)
+  y_train shape: (229578,)
+  X_val shape: (38263, 256, 4)
+  y_val shape: (38263,)
+Training fold 6: 100%|██████████| 20/20 [2:31:28<00:00, 454.42s/it]  
+  Results for fold 6:
+    Accuracy: 0.9196090217703787
+    Precision: 0.9140276450657897
+    Recall: 0.9089771452676367
+    F1 Score: 0.9114028479469622
+Fold 7:
+  X_train shape: (229578, 256, 4)
+  y_train shape: (229578,)
+  X_val shape: (38263, 256, 4)
+  y_val shape: (38263,)
+Training fold 7: 100%|██████████| 20/20 [2:07:39<00:00, 382.95s/it]  
+  Results for fold 7:
+    Accuracy: 0.9091027885947259
+    Precision: 0.9272160151834048
+    Recall: 0.8769041859197284
+    F1 Score: 0.8949112075143654
+Average across folds:
+  Accuracy: 0.896707374897794
+  Precision: 0.9121712730309248
+  Recall: 0.8650997987492322
+  F1 Score: 0.8807079504289989
+Training and cross-validation completed.
+Final training with best hyperparameters:
+  Accuracy: 0.896707374897794
+  Precision: 0.9121712730309248
+  Recall: 0.8650997987492322
+  F1 Score: 0.8807079504289989
+Model will be saved as: best_pure_metrics_cnn_model_20240602_141132.pth
+Best model saved to 'best_pure_metrics_cnn_model_20240602_141132.pth'.
+
+Test set evaluation results:
+  Accuracy: 0.917797717571217
+  Precision: 0.9134568367293017
+  Recall: 0.9055249910166071
+  F1 Score: 0.9092475604292138
+
+(0.917797717571217, 0.9134568367293017, 0.9055249910166071, 0.9092475604292138)
+
+Runtime on device: 972 min = 16h 12min
+Processor	13th Gen Intel(R) Core(TM) i7-13620H   2.40 GHz
+RAM	64,0 GB (63,7 GB usable)
