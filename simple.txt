@@ -1,0 +1,450 @@
+[I 2024-06-04 00:45:15,952] A new study created in memory with name: no-name-31267421-47b6-4618-a6a7-04340a34d402
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [03:08<00:00,  9.43s/it]
+  Results for fold 1:
+    Accuracy: 0.6823266219239373
+    Precision: 0.6609245071475287
+    Recall: 0.645976353928299
+    F1 Score: 0.6493923994697305
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [03:03<00:00,  9.17s/it]
+/home/erkkit/nnw/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Results for fold 2:
+    Accuracy: 0.6322869955156951
+    Precision: 0.31614349775784756
+    Recall: 0.5
+    F1 Score: 0.3873626373626374
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [03:10<00:00,  9.52s/it]
+/home/erkkit/nnw/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+[I 2024-06-04 00:54:47,637] Trial 0 finished with value: 0.47747299782397806 and parameters: {'conv1_filters': 16, 'conv2_filters': 32, 'conv3_filters': 128, 'fc1_units': 64, 'dropout_rate': 0.3}. Best is trial 0 with value: 0.47747299782397806.
+  Results for fold 3:
+    Accuracy: 0.6547085201793722
+    Precision: 0.3273542600896861
+    Recall: 0.5
+    F1 Score: 0.3956639566395664
+Average results across all folds:
+  Accuracy: 0.6564407125396682
+  Precision: 0.4348074216650208
+  Recall: 0.5486587846427663
+  F1 Score: 0.47747299782397806
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [13:17<00:00, 39.86s/it]
+  Results for fold 1:
+    Accuracy: 0.6442953020134228
+    Precision: 0.6140790128921596
+    Recall: 0.587369692346809
+    F1 Score: 0.5841471192271911
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [13:10<00:00, 39.52s/it]
+  Results for fold 2:
+    Accuracy: 0.6502242152466368
+    Precision: 0.6143105158730159
+    Recall: 0.5996583636049126
+    F1 Score: 0.6014663764463283
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [13:16<00:00, 39.85s/it]
+[I 2024-06-04 01:34:54,480] Trial 1 finished with value: 0.5851593978755956 and parameters: {'conv1_filters': 48, 'conv2_filters': 128, 'conv3_filters': 256, 'fc1_units': 64, 'dropout_rate': 0.3}. Best is trial 1 with value: 0.5851593978755956.
+  Results for fold 3:
+    Accuracy: 0.6165919282511211
+    Precision: 0.5711879940428457
+    Recall: 0.5690935776552215
+    F1 Score: 0.5698646979532674
+Average results across all folds:
+  Accuracy: 0.6370371485037268
+  Precision: 0.5998591742693404
+  Recall: 0.5853738778689811
+  F1 Score: 0.5851593978755956
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [04:56<00:00, 14.83s/it]
+  Results for fold 1:
+    Accuracy: 0.6577181208053692
+    Precision: 0.7147213855421687
+    Recall: 0.5604182557843885
+    F1 Score: 0.5124435921381877
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [04:55<00:00, 14.79s/it]
+  Results for fold 2:
+    Accuracy: 0.6569506726457399
+    Precision: 0.6393377059670453
+    Recall: 0.5564997405293202
+    F1 Score: 0.5251059565317243
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [05:00<00:00, 15.01s/it]
+[I 2024-06-04 01:49:55,489] Trial 2 finished with value: 0.5311829884365433 and parameters: {'conv1_filters': 16, 'conv2_filters': 96, 'conv3_filters': 64, 'fc1_units': 192, 'dropout_rate': 0.7}. Best is trial 1 with value: 0.5851593978755956.
+  Results for fold 3:
+    Accuracy: 0.647982062780269
+    Precision: 0.5861108488339156
+    Recall: 0.5608432663227184
+    F1 Score: 0.555999416639718
+Average results across all folds:
+  Accuracy: 0.654216952077126
+  Precision: 0.6467233134477098
+  Recall: 0.5592537542121424
+  F1 Score: 0.5311829884365433
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [11:54<00:00, 35.75s/it]
+  Results for fold 1:
+    Accuracy: 0.668903803131991
+    Precision: 0.6488484985324001
+    Recall: 0.6117467581998475
+    F1 Score: 0.6105721685895926
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [11:48<00:00, 35.42s/it]
+  Results for fold 2:
+    Accuracy: 0.6434977578475336
+    Precision: 0.599550763701707
+    Recall: 0.5598944819235426
+    F1 Score: 0.5456182280687141
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [11:39<00:00, 34.99s/it]
+/home/erkkit/nnw/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+[I 2024-06-04 02:25:38,763] Trial 3 finished with value: 0.5172847844326244 and parameters: {'conv1_filters': 48, 'conv2_filters': 128, 'conv3_filters': 192, 'fc1_units': 64, 'dropout_rate': 0.6000000000000001}. Best is trial 1 with value: 0.5851593978755956.
+  Results for fold 3:
+    Accuracy: 0.6547085201793722
+    Precision: 0.3273542600896861
+    Recall: 0.5
+    F1 Score: 0.3956639566395664
+Average results across all folds:
+  Accuracy: 0.655703360386299
+  Precision: 0.5252511741079311
+  Recall: 0.5572137467077968
+  F1 Score: 0.5172847844326244
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [13:34<00:00, 40.70s/it]
+  Results for fold 1:
+    Accuracy: 0.6353467561521253
+    Precision: 0.6048340548340548
+    Recall: 0.5923595219933893
+    F1 Score: 0.5931212410581159
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [13:12<00:00, 39.62s/it]
+  Results for fold 2:
+    Accuracy: 0.647982062780269
+    Precision: 0.6083088954056696
+    Recall: 0.5838522746929597
+    F1 Score: 0.5821752283888368
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [13:32<00:00, 40.62s/it]
+[I 2024-06-04 03:06:18,280] Trial 4 finished with value: 0.5975698740959969 and parameters: {'conv1_filters': 48, 'conv2_filters': 128, 'conv3_filters': 192, 'fc1_units': 256, 'dropout_rate': 0.3}. Best is trial 4 with value: 0.5975698740959969.
+  Results for fold 3:
+    Accuracy: 0.6524663677130045
+    Precision: 0.6169197540387454
+    Recall: 0.6179727806440135
+    F1 Score: 0.617413152841038
+Average results across all folds:
+  Accuracy: 0.6452650622151329
+  Precision: 0.6100209014261566
+  Recall: 0.5980615257767875
+  F1 Score: 0.5975698740959969
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [10:37<00:00, 31.89s/it]
+  Results for fold 1:
+    Accuracy: 0.6554809843400448
+    Precision: 0.6286822491507378
+    Recall: 0.6075514874141876
+    F1 Score: 0.6083943931188276
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [10:39<00:00, 31.98s/it]
+  Results for fold 2:
+    Accuracy: 0.6771300448430493
+    Precision: 0.6493103055175559
+    Recall: 0.6132805742951046
+    F1 Score: 0.6143073338297821
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [10:46<00:00, 32.31s/it]
+[I 2024-06-04 03:38:39,289] Trial 5 finished with value: 0.595002063966283 and parameters: {'conv1_filters': 48, 'conv2_filters': 96, 'conv3_filters': 192, 'fc1_units': 128, 'dropout_rate': 0.7}. Best is trial 4 with value: 0.5975698740959969.
+  Results for fold 3:
+    Accuracy: 0.6659192825112108
+    Precision: 0.6130278526504942
+    Recall: 0.5699386230208148
+    F1 Score: 0.5623044649502394
+Average results across all folds:
+  Accuracy: 0.6661767705647683
+  Precision: 0.6303401357729294
+  Recall: 0.5969235615767023
+  F1 Score: 0.595002063966283
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [13:36<00:00, 40.83s/it]
+  Results for fold 1:
+    Accuracy: 0.6554809843400448
+    Precision: 0.6506421457277651
+    Recall: 0.5730676328502415
+    F1 Score: 0.5492535358826611
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [13:39<00:00, 40.96s/it]
+  Results for fold 2:
+    Accuracy: 0.625560538116592
+    Precision: 0.5862139373994091
+    Recall: 0.5776033558207923
+    F1 Score: 0.5785190844014374
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [13:50<00:00, 41.52s/it]
+[I 2024-06-04 04:20:05,587] Trial 6 finished with value: 0.5698394968735243 and parameters: {'conv1_filters': 32, 'conv2_filters': 128, 'conv3_filters': 256, 'fc1_units': 256, 'dropout_rate': 0.7}. Best is trial 4 with value: 0.5975698740959969.
+  Results for fold 3:
+    Accuracy: 0.6278026905829597
+    Precision: 0.5834713024282561
+    Recall: 0.5807240704500979
+    F1 Score: 0.5817458703364744
+Average results across all folds:
+  Accuracy: 0.6362814043465321
+  Precision: 0.6067757951851435
+  Recall: 0.5771316863737105
+  F1 Score: 0.5698394968735243
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [05:22<00:00, 16.12s/it]
+  Results for fold 1:
+    Accuracy: 0.668903803131991
+    Precision: 0.6461149961149961
+    Recall: 0.6195334350368675
+    F1 Score: 0.6209433443344334
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [05:38<00:00, 16.91s/it]
+/home/erkkit/nnw/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Results for fold 2:
+    Accuracy: 0.6322869955156951
+    Precision: 0.31614349775784756
+    Recall: 0.5
+    F1 Score: 0.3873626373626374
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [05:43<00:00, 17.20s/it]
+[I 2024-06-04 04:36:57,760] Trial 7 finished with value: 0.5456021187429686 and parameters: {'conv1_filters': 16, 'conv2_filters': 32, 'conv3_filters': 256, 'fc1_units': 128, 'dropout_rate': 0.7}. Best is trial 4 with value: 0.5975698740959969.
+  Results for fold 3:
+    Accuracy: 0.6883408071748879
+    Precision: 0.6480507055728295
+    Recall: 0.6238880982031667
+    F1 Score: 0.6285003745318352
+Average results across all folds:
+  Accuracy: 0.663177201940858
+  Precision: 0.5367697331485578
+  Recall: 0.5811405110800114
+  F1 Score: 0.5456021187429686
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [08:13<00:00, 24.67s/it]
+  Results for fold 1:
+    Accuracy: 0.610738255033557
+    Precision: 0.5845024540676714
+    Recall: 0.5824434274091025
+    F1 Score: 0.5831475367662822
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [08:12<00:00, 24.63s/it]
+  Results for fold 2:
+    Accuracy: 0.600896860986547
+    Precision: 0.5654090583601862
+    Recall: 0.5632027330911606
+    F1 Score: 0.5638405414908579
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [08:08<00:00, 24.42s/it]
+[I 2024-06-04 05:01:44,048] Trial 8 finished with value: 0.5624139802619614 and parameters: {'conv1_filters': 16, 'conv2_filters': 96, 'conv3_filters': 192, 'fc1_units': 192, 'dropout_rate': 0.3}. Best is trial 4 with value: 0.5975698740959969.
+  Results for fold 3:
+    Accuracy: 0.6210762331838565
+    Precision: 0.5544616673648931
+    Recall: 0.5433641700764988
+    F1 Score: 0.5402538625287441
+Average results across all folds:
+  Accuracy: 0.6109037830679869
+  Precision: 0.5681243932642502
+  Recall: 0.5630034435255873
+  F1 Score: 0.5624139802619614
+Fold 1:
+  X_train shape: (892, 256, 256)
+  y_train shape: (892,)
+  X_val shape: (447, 256, 256)
+  y_val shape: (447,)
+Training fold 1: 100%|██████████| 20/20 [09:22<00:00, 28.15s/it]
+  Results for fold 1:
+    Accuracy: 0.5637583892617449
+    Precision: 0.5640214606021781
+    Recall: 0.5677599796592931
+    F1 Score: 0.5577737753988992
+Fold 2:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 2: 100%|██████████| 20/20 [09:26<00:00, 28.35s/it]
+  Results for fold 2:
+    Accuracy: 0.6457399103139013
+    Precision: 0.6218596163639449
+    Recall: 0.6241783428472583
+    F1 Score: 0.6227946214457005
+Fold 3:
+  X_train shape: (893, 256, 256)
+  y_train shape: (893,)
+  X_val shape: (446, 256, 256)
+  y_val shape: (446,)
+Training fold 3: 100%|██████████| 20/20 [09:29<00:00, 28.49s/it]
+[I 2024-06-04 05:30:19,491] Trial 9 finished with value: 0.5696913408193771 and parameters: {'conv1_filters': 32, 'conv2_filters': 96, 'conv3_filters': 256, 'fc1_units': 64, 'dropout_rate': 0.4}. Best is trial 4 with value: 0.5975698740959969.
+  Results for fold 3:
+    Accuracy: 0.6233183856502242
+    Precision: 0.5495271432080571
+    Recall: 0.5358699519658424
+    F1 Score: 0.5285056256135316
+Average results across all folds:
+  Accuracy: 0.6109388950752902
+  Precision: 0.5784694067247267
+  Recall: 0.5759360914907979
+  F1 Score: 0.5696913408193771
+Best trial: [0.5975698740959969]
+Best hyperparameters: {'conv1_filters': 48, 'conv2_filters': 128, 'conv3_filters': 192, 'fc1_units': 256, 'dropout_rate': 0.3}
+
+21:01:32.108 [info] Restarted fcf35927-74d9-47de-a3d9-46706abf953a
+21:05:41.952 [info] Dispose Kernel '~/projects/nnw/pure_metrics_CNN.ipynb' associated with '~/projects/nnw/pure_metrics_CNN.ipynb'
+00:17:08.745 [info] Interrupt kernel execution
+00:17:08.747 [info] Interrupt requested ~/projects/nnw/simple_images_CNN.ipynb
+00:17:08.747 [info] Interrupt kernel execution
+00:17:08.748 [info] Interrupting kernel: python31012jvsc74a57bd096ceffb4d6cc80a4f97a8828a2f4cd8146f2ea8f34afa28e6eb6972275d71c57
+00:17:08.750 [info] Interrupting kernel via SIGINT
+00:17:09.282 [warn] Cell completed with errors (cancelled)
+00:17:09.286 [info] Interrupt requested & sent for ~/projects/nnw/simple_images_CNN.ipynb in notebookEditor.
+00:42:45.808 [error] Disposing session as kernel process died ExitCode: undefined, Reason: 
+00:42:54.338 [info] Restart requested ~/projects/nnw/simple_images_CNN.ipynb
+00:42:54.340 [warn] Cancel all remaining cells due to dead kernel
+00:42:54.471 [info] Process Execution: ~/nnw/bin/python -c "import ipykernel; print(ipykernel.__version__); print("5dc3a68c-e34e-4080-9c3e-2a532b2ccb4d"); print(ipykernel.__file__)"
+00:42:54.473 [info] Process Execution: ~/nnw/bin/python -m ipykernel_launcher --f=/home/~/.local/share/jupyter/runtime/kernel-v2-582MSZ3QwB1j6NC.json
+    > cwd: //home/~/projects/nnw
+00:42:55.048 [info] Restarted fcf35927-74d9-47de-a3d9-46706abf953a
+05:30:51.858 [error] Disposing session as kernel process died ExitCode: undefined, Reason: 
+
+Runtime 4h 48min for hyperparameter optimization.
+
+Compute time for 1 epoch in first fold of 7:
+Training fold 1:   5%|▌         | 1/20 [1:50:27<34:58:43, 6627.56s/it]
+This would equate to a total training time of ca 10 days.
+Have to simplify...
+
+Tried running on 50% data, memory fault.
+Tried running on 33% data:
+/home/erkkit/nnw/lib/python3.10/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+Training: 100%|██████████| 20/20 [11:27:51<00:00, 2063.59s/it]  
+NR16: Final training with best hyperparameters:
+  Accuracy: 0.6441301598252271
+  Precision: 0.32206507991261357
+  Recall: 0.5
+  F1 Score: 0.3917756486467585
+NR17: Model will be saved as: best_simple_images_cnn_model_20240605_214245.pth
+NR18: Best model saved to 'best_simple_images_cnn_model_20240605_214245.pth'.
+/home/erkkit/nnw/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+NR19: Test set evaluation results:
+  Accuracy: 0.64515
+  Precision: 0.322575
+  Recall: 0.5
+  F1 Score: 0.3921526912439595
+/home/erkkit/nnw/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+(0.64515, 0.322575, 0.5, 0.3921526912439595)
