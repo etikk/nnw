@@ -213,3 +213,36 @@ model = torch.load(filename)
 evaluate_model_on_test_set(model, test_files)
 
 
+# %%
+
+
+# BLOCK 10
+
+import torch
+import torch.nn as nn
+
+# Define a function to print model metrics
+def print_model_metrics(model, model_name):
+    total_params = sum(p.numel() for p in model.parameters())
+    trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    
+    print(f"Model: {model_name}")
+    print(f"Total parameters: {total_params}")
+    print(f"Trainable parameters: {trainable_params}")
+    print("Layer details:")
+    for name, param in model.named_parameters():
+        print(f"{name}: {param.size()}")
+
+# Load the models
+
+# pure_metrics_model_path = 'best_pure_metrics_cnn_model_20240602_141132.pth'
+simple_images_model_path = 'best_simple_images_cnn_model_20240605_214245.pth'
+
+# pure_metrics_model = torch.load(pure_metrics_model_path)
+simple_images_model = torch.load(simple_images_model_path)
+
+# Print metrics for both models
+# print_model_metrics(pure_metrics_model, "Pure Metrics CNN Model")
+# print("\n" + "="*50 + "\n")
+print_model_metrics(simple_images_model, "Simple Images CNN Model")
+# %%

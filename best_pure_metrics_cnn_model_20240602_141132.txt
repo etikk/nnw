@@ -505,3 +505,19 @@ Test set evaluation results:
 Runtime on device: 972 min = 16h 12min
 Processor	13th Gen Intel(R) Core(TM) i7-13620H   2.40 GHz
 RAM	64,0 GB (63,7 GB usable)
+
+
+Model: Pure Metrics CNN Model
+Total parameters: 1728562
+Trainable parameters: 1728562
+Layer details:
+conv1.weight: torch.Size([48, 4, 5, 1])
+conv1.bias: torch.Size([48])
+conv2.weight: torch.Size([128, 48, 5, 1])
+conv2.bias: torch.Size([128])
+conv3.weight: torch.Size([192, 128, 5, 1])
+conv3.bias: torch.Size([192])
+fc1.weight: torch.Size([256, 6144])
+fc1.bias: torch.Size([256])
+fc2.weight: torch.Size([2, 256])
+fc2.bias: torch.Size([2])
